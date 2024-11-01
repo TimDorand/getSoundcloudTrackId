@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Get Soundcloud ID",
+    "description": "Go to track page and click on the extension to get the Soundcloud Track ID",
+    "version": "1.0",
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "radiosofa_logo_white.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://soundcloud.com/*"
+            ],
+            "js": [
+                "popup.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "clipboardWrite",
+        "clipboardRead"
+    ]
+}
